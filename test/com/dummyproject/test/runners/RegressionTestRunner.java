@@ -10,11 +10,12 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "test/resources/features",
+        features = "classpath:features",
         glue = {
                 "com.dummyproject.test.stepdefinitions",
                 "com.dummyproject.test.hooks"
         },
+        tags = "@regression",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber.html",
